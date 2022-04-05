@@ -1,0 +1,122 @@
+.parent{
+    background-color: rgb(115, 189, 214);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.child{
+    background-color: white;
+    display: flex;
+    width: 90%;
+    height: 80%;
+    box-shadow: 0 0 2em grey;
+}
+.menu{
+    height: 100%;
+    width: 20%;
+    padding-right: 2em;
+}
+img[alt="Profile"]{
+    height: 8em;
+    width: 8em;
+    margin-top: 0.5em;
+    border-radius: 50%;
+    border: 0.2rem solid rgb(115, 189, 214);
+}
+img[alt="Profile"]:hover{
+    width: 16em;
+    border-radius: 0;
+    box-shadow: 0 0 1em grey;
+}
+li{
+    font-weight: 100;
+    font-size: smaller;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    
+}
+.userdetails{
+    text-align: center;
+}
+hr{
+    background-color: rgb(115, 189, 214);
+    height: 0.1em;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-primary{
+    background-color: rgb(115, 189, 214);
+    border-color: rgb(115, 189, 214);
+}
+.profileImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    height: 100%;
+    width: 80%;
+    padding-left: 2em;
+    padding-right: 2em;
+    background-color: rgb(236, 234, 234);
+}
+.contentTop{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.contentTop button{
+    background-color: purple;
+    border-color: purple;
+}
+.contentMiddle{
+    width: 100%;
+    height: 42%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.middle{
+    width: 32%;
+    height: 90%;
+    background-color: white;
+    box-shadow: 0 0 0.1em gray;
+}
+.contentBottom{
+    width: 100%;
+    height: 42%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.Bottom1{
+    width: 60%;
+    height: 90%;
+    background-color: white;
+    box-shadow: 0 0 0.1em gray;
+}
+.Bottom2{
+    width: 36%;
+    height: 90%;
+    background-color: white;
+    box-shadow: 0 0 0.1em gray;
+}
+h4{
+    color: rgb(115, 189, 214);
+}
+.middle:hover,.Bottom1:hover,.Bottom2:hover{
+    box-shadow: 0 0 1em gray;
+}
+button:hover{
+    box-shadow: 0 0 1em gray;
+}
+button:visited{
+    background-color: purple;
+}
