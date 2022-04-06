@@ -37,3 +37,6 @@ h1{
 .btn-danger{
     background-color: red;
 }
+.valid-feedback,.invalid-feedback{
+     visibility: hidden;
+}

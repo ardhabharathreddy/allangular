@@ -8,31 +8,23 @@
             <li class="userdetails">Bharath Reddy</li>
             <li class="userdetails">ardhabharath@gmail.com</li>
             <hr>
-            <li class="menuitems"><span class="glyphicon glyphicon-align-justify"></span>&nbsp;&nbsp;DASHBOARD</li>
-            <li class="menuitems"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;ACCOUNT PROFILE</li>
-            <li class="menuitems"><span class="glyphicon glyphicon-sunglasses"></span>&nbsp;&nbsp;EXERCISE PLANS</li>
-            <li class="menuitems"><span class="glyphicon glyphicon-cutlery"></span>&nbsp;&nbsp;DIET PLANS</li>
-            <li class="menuitems"><span class="glyphicon glyphicon-credit-card"></span>&nbsp;&nbsp;SUBSCRIPTION</li>
+            <li class="menuitems" routerLink="interpolation"><span class="glyphicon glyphicon-align-justify"></span>&nbsp;&nbsp;INTERPOLATION</li>
+            <li class="menuitems" routerLink="eventbinding"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;EVENT BINDING</li>
+            <li class="menuitems" routerLink="apps"><span class="glyphicon glyphicon-sunglasses"></span>&nbsp;&nbsp;APPS</li>
+            <li class="menuitems" routerLink="vehiclesummary"><span class="glyphicon glyphicon-cutlery"></span>&nbsp;&nbsp;VEHICLE SUMMARY</li>
+            <li class="menuitems" routerLink="home"><span class="glyphicon glyphicon-credit-card"></span>&nbsp;&nbsp;HOME</li>
             <li class="menuitems"><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;EXTRA SERVICES</li>
             <hr>
         
-            <li><div class="btn"><button type="submit" class="btn btn-primary btn-block">LOGOUT</button> </div></li>
+            <li><div class="btn"><button type="submit" class="btn btn-primary btn-block" routerLink="/login">LOGOUT</button> </div></li>
         </ul>
         </div>
-      <div class="content">
-        <div class="contentTop">
-            <h4>Presonal Progress</h4>
-            <button type="button" class="btn btn-primary">CONTACT SUPPORT</button>
+        <div class="content">
+            <div class="contentTop">
+                <h4>Presonal Progress</h4>
+                <button type="button" class="btn btn-primary">CONTACT SUPPORT</button>
+            </div>
+            <router-outlet></router-outlet>
         </div>
-        <div class="contentMiddle">
-            <div class="middle"></div>
-            <div class="middle"></div>
-            <div class="middle"></div>
-        </div>
-        <div class="contentBottom">
-            <div class="Bottom1"></div>
-            <div class="Bottom2"></div>
-        </div>
-      </div>
     </div>
 </div>

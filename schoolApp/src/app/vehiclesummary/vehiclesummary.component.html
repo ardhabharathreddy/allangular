@@ -1,0 +1,29 @@
+<div class="parent">
+    <table class="table table-striped">
+    <thead>
+        <tr class="rowHeader">
+            <th>VEHICLE</th>
+            <th>Manufacturer</th>
+            <th>Model</th>
+            <th>Type</th>
+            <th>Fuel</th>
+            <th>Color</th>
+            <th>Image</th>
+            <th>Id</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let vehicle of vehicleData">
+            <!-- <td>{{vehicle|json}}</td> -->
+            <td>{{vehicle.Vehicle}}</td>
+            <td>{{vehicle.manufacturer}}</td>
+            <td>{{vehicle.model}}</td>
+            <td>{{vehicle.type}}</td>
+            <td>{{vehicle.fuel}}</td>
+            <td>{{vehicle.color}}</td>
+            <td><img src="{{vehicle.image}}" alt="Vehicle Image" width="50em" height="50em"></td>
+            <td>{{vehicle.id}}</td>
+        </tr>
+    </tbody>
+    </table>
+</div>
