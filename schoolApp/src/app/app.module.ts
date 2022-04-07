@@ -12,6 +12,7 @@ import { InterpolationComponent } from './interpolation/interpolation.component'
 import { EventbindingComponent } from './eventbinding/eventbinding.component';
 import { AppsComponent } from './apps/apps.component';
 import { VehiclesummaryComponent } from './vehiclesummary/vehiclesummary.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { VehiclesummaryComponent } from './vehiclesummary/vehiclesummary.compone
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

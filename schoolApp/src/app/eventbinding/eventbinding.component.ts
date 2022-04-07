@@ -11,5 +11,29 @@ export class EventbindingComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  test1(){
+    alert("clicked");
+  }
+  test2(){
+    alert("clicked twice");
+  }
+  test3(){
+    var id = document.getElementById("input1");
+    alert("keypressed"+id);
+  }
+  test4()
+  {
+    alert("keyup");
+  }
+  test5()
+  {
+    alert("keydown");
+  }
+  test6(){
+    alert("focus");
+  }
+  test7(){
+    alert("mouseenter");
+  }
+  name="abc";
 }

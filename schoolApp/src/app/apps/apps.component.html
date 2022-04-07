@@ -1,1 +1,55 @@
-<p>apps works!</p>
+
+<div class="row">
+    <div class="col-lg-4 col-md-6">
+    <caption>Calculator</caption>
+    <input [(ngModel)]="x" class="form-control" placeholder="Operand1"><br>
+    <p>{{x}}</p>
+    <input [(ngModel)]="y" class="form-control " placeholder="Operand2"><br>
+    <p>{{y}}</p>
+    <button type="button"class="btn btn-primary" (click)="add()">ADD <span *ngIf="c==0 || c">{{c}}</span></button>
+    <button type="button" class="btn btn-primary" (click)="sub()">SUB</button>
+    <button type="button"class="btn btn-primary" (click)="mul()">MUL</button>
+    <button type="button" class="btn btn-primary" (click)="div()">DIV</button>
+     </div>
+     <div class="col-lg-4 col-md-6">
+     <caption>Area&nbsp;Calculator</caption>
+     <input [(ngModel)]="height"placeholder="Height" class="form-control"><br>
+     <input [(ngModel)]="width" placeholder="Weight" class="form-control"><br>
+     <div class="buttongroup">
+     <button (click)="area()" class="btn btn-primary">Area</button>
+     <button (click)="perimeter()" class="btn btn-primary">perimeter</button>
+     </div>
+     <p *ngIf="areaAnswer>=0">Area is : {{areaAnswer}}</p>
+     <p *ngIf="perimeterAnswer>=0">perimeter is : {{perimeterAnswer}}</p>
+     </div>
+     <div class="col-lg-4 col-md-6">
+      <caption>Event&nbsp;Regestration</caption>
+      <label for="name">Name:</label>
+      <input type="text" id="name" [(ngModel)]="regestername" class="form-control" autocomplete="off"><br>
+      <button class="btn btn-primary" (click)="regester()">Regester</button><br>
+      <ul type="none">
+        <li *ngFor="let name of regesteredname">
+             {{name}}
+        </li>
+      </ul>
+     </div>
+     <div class="col-lg-4 col-md-6">
+        <caption>Cart</caption>
+        <label for="product">Product:</label>
+        <input type="text" id="product" placeholder="Product" [(ngModel)]="product" class="form-control"><br>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" [(ngModel)]="quantity" class="form-control"><br>
+        <label for="price">Price:</label>
+        <input type="number" id="price" [(ngModel)]="price" class="form-control"><br>
+        <button class="btn btn-primary" (click)="addToCart()">Add to cart</button>
+        <caption>Cart&nbsp;Items</caption>
+        <table class="table"> 
+             <tr *ngFor="let cartItem of cartItems">
+               <td>{{cartItem.productItem}}</td>
+               <td>{{cartItem.quantityInNumber}}</td>
+               <td>{{cartItem.priceOfProduct}}</td>
+             </tr>
+        </table>
+        <p>{{cartItems|json}}</p>
+     </div>
+</div>

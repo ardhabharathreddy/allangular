@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class InterpolationComponent implements OnInit {
   name="";
   number=NaN;
+  dob="12/04/1997";
   boolean=true;
   undefined=undefined;
   array=[1,2,3,4];

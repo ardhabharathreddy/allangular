@@ -1,6 +1,11 @@
-p
+.row
 {
-    color: red;
+    z-index: 1;
+}
+.buttongroup{
+    display: flex;
+    justify-content: space-between;
+}
+p{
     text-align: center;
-    height: 100%;
 }

@@ -6,3 +6,12 @@ tr:hover{
     top: 15%;
     background-color: rgb(236, 234, 234);
 }
+.fuelColumn{
+    background-color: red;
+}
+.greenColumn{
+    background-color: green;
+}
+.yellowColumn{
+    background-color: yellow;
+}
