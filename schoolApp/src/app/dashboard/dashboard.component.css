@@ -17,6 +17,7 @@
     height: 100%;
     width: 20%;
     padding-right: 2em;
+    overflow: auto;
 }
 img[alt="Profile"]{
     height: 8em;
@@ -76,6 +77,7 @@ hr{
     position: sticky;
     top: 0;
     z-index: 100;
+    margin-bottom: 0.5rem;
 }
 button:hover{
     box-shadow: 0 0 1em gray;

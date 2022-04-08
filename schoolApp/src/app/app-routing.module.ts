@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { AccountsComponent } from './accounts/accounts.component';
 import { AppComponent } from './app.component';
 import { AppsComponent } from './apps/apps.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -19,13 +20,10 @@ const routes: Routes = [
               {path:"eventbinding",component:EventbindingComponent},
               {path:"apps",component:AppsComponent},
               {path:"vehiclesummary",component:VehiclesummaryComponent},
+              {path:"accounts",component:AccountsComponent},
               {path:"",component:HomeComponent},
               {path:"**",component:PagenotfoundComponent}
             ]
-  },
-  {
-    path:"home",
-    component:HomeComponent
   },
   {
     path:"",

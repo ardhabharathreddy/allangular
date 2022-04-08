@@ -58,4 +58,32 @@ export class AppsComponent implements OnInit {
     cartItem.priceOfProduct=this.price;
     this.cartItems.push(cartItem);
   }
+  username="";
+  email="";
+  phonenumber=NaN;
+  city="";
+  userDetails:any[]=[];
+  submit()
+  {
+    var details:any={};
+    details.nameofuser=this.username;
+    details.emailaddress=this.email;
+    details.phonenumber=this.phonenumber;
+    details.city=this.city;
+    this.userDetails.push(details);
+  }
+  reset()
+  {
+    this.userDetails.pop();
+  }
+  isRed=true;
+  default1=true;
+  colorName:any="Red";
+  change(){
+    this.colorName=this.isRed==true?'Green':'Red';
+    this.isRed=!this.isRed;
+  }
+  reset1(){
+    this.default1=!this.default1;
+  }
 }
