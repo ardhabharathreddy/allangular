@@ -15,6 +15,9 @@ import { VehiclesummaryComponent } from './vehiclesummary/vehiclesummary.compone
 import { FormsModule } from '@angular/forms';
 import { AccountsComponent } from './accounts/accounts.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FlipkartproductComponent } from './flipkartproduct/flipkartproduct.component';
+import { CreatevehicleComponent } from './createvehicle/createvehicle.component';
+import { CreateaccountComponent } from './createaccount/createaccount.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { HttpClientModule } from '@angular/common/http';
     EventbindingComponent,
     AppsComponent,
     VehiclesummaryComponent,
-    AccountsComponent
+    AccountsComponent,
+    FlipkartproductComponent,
+    CreatevehicleComponent,
+    CreateaccountComponent
   ],
   imports: [
     BrowserModule,

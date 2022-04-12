@@ -4,8 +4,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { AccountsComponent } from './accounts/accounts.component';
 import { AppComponent } from './app.component';
 import { AppsComponent } from './apps/apps.component';
+import { CreateaccountComponent } from './createaccount/createaccount.component';
+import { CreatevehicleComponent } from './createvehicle/createvehicle.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EventbindingComponent } from './eventbinding/eventbinding.component';
+import { FlipkartproductComponent } from './flipkartproduct/flipkartproduct.component';
 import { HomeComponent } from './home/home.component';
 import { InterpolationComponent } from './interpolation/interpolation.component';
 import { LoginComponent } from './login/login.component';
@@ -21,10 +24,14 @@ const routes: Routes = [
               {path:"apps",component:AppsComponent},
               {path:"vehiclesummary",component:VehiclesummaryComponent},
               {path:"accounts",component:AccountsComponent},
+              {path:"flipkartproduct",component:FlipkartproductComponent},
+              {path:"createvehicle",component:CreatevehicleComponent},
+              {path:"createaccount",component:CreateaccountComponent},
               {path:"",component:HomeComponent},
               {path:"**",component:PagenotfoundComponent}
             ]
   },
+  {path:"flipkartproduct",component:FlipkartproductComponent},
   {
     path:"",
     component:LoginComponent

@@ -8,8 +8,27 @@ import { AccountServicesService } from '../account-services.service';
 })
 export class AccountsComponent implements OnInit {
   user:any=[];
+  filterContent:any="";
+  filter(){
+    this.accountServices.getFilteredAccounts(this.filterContent).subscribe(
+        (data:any)=>{
+          this.user=data;
+        },
+        (error:any)=>{
+          alert("internal server error");
+        }
+    )
+  }
   constructor(private accountServices:AccountServicesService) {
-    this.user=accountServices.userData;
+    accountServices.getUserData().subscribe(
+      (data:any)=>{
+        this.user=data;
+      },
+      (error:any)=>{
+        alert("internal server error");
+      }
+
+    )
    }
 
   ngOnInit(): void {
