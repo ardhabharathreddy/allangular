@@ -5,8 +5,10 @@ import { AccountsComponent } from './accounts/accounts.component';
 import { AppComponent } from './app.component';
 import { AppsComponent } from './apps/apps.component';
 import { CreateaccountComponent } from './createaccount/createaccount.component';
+import { CreateemployeeComponent } from './createemployee/createemployee.component';
 import { CreatevehicleComponent } from './createvehicle/createvehicle.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { EmployeeComponent } from './employee/employee.component';
 import { EventbindingComponent } from './eventbinding/eventbinding.component';
 import { FlipkartproductComponent } from './flipkartproduct/flipkartproduct.component';
 import { HomeComponent } from './home/home.component';
@@ -27,6 +29,8 @@ const routes: Routes = [
               {path:"flipkartproduct",component:FlipkartproductComponent},
               {path:"createvehicle",component:CreatevehicleComponent},
               {path:"createaccount",component:CreateaccountComponent},
+              {path:"employee",component:EmployeeComponent},
+              {path:"createemployee",component:CreateemployeeComponent},
               {path:"",component:HomeComponent},
               {path:"**",component:PagenotfoundComponent}
             ]
