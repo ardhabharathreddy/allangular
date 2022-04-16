@@ -85,3 +85,6 @@ button:hover{
 button:visited{
     background-color: purple;
 }
+li:hover{
+    cursor: pointer;
+}

@@ -54,6 +54,12 @@ export class VehiclesummaryComponent implements OnInit {
         }
        )
      }
+  delete(vehicleId:any){
+    this.vehicleService.deleteVehicle(vehicleId).subscribe(
+      (data:any)=>{alert("deleted")},
+      (error:any)=>{alert("failed to delete")}
+    );
+  }
   constructor(private vehicleService:VehicelServicesService) { 
     // this.vehicles=vehicleService.data;
     vehicleService.getData().subscribe(

@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AccountsComponent } from './accounts/accounts.component';
 import { AppComponent } from './app.component';
 import { AppsComponent } from './apps/apps.component';
+import { AuthGuard } from './auth.guard';
 import { CreateaccountComponent } from './createaccount/createaccount.component';
 import { CreateemployeeComponent } from './createemployee/createemployee.component';
 import { CreatevehicleComponent } from './createvehicle/createvehicle.component';
@@ -19,7 +20,7 @@ import { VehiclesummaryComponent } from './vehiclesummary/vehiclesummary.compone
 
 const routes: Routes = [
   {path:"login",component:LoginComponent},
-  {path:"dashboard",component:DashboardComponent,
+  {path:"dashboard",component:DashboardComponent,canActivate:[AuthGuard],
     children:[{path:"home",component:HomeComponent},
               {path:"interpolation",component:InterpolationComponent},
               {path:"eventbinding",component:EventbindingComponent},

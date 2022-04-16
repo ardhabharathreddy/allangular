@@ -27,6 +27,20 @@
         
         <input  formControlName="id" type="text" class="form-control" id="Id" placeholder="Id" name="Id">
       </div>
+      <button type="submit" class="btn btn-outline-light text-dark" (click)="add()">+&nbsp;<span>Add card</span></button>
+      <div class="form-group" formArrayName="card">
+        <div *ngFor="let card of cardFormArray.controls;let i=index">
+          <div formGroupName="{{i}}">
+            <input  formControlName="cardno" type="text" class="form-control" placeholder="cardno" name="cardno">
+            <input  formControlName="expiry" type="text" class="form-control" placeholder="expiry" name="expiry">
+            <input  formControlName="cvv" type="text" class="form-control" placeholder="cvv" name="cvv">
+            <button type="submit" class="btn btn-primary" (click)="delet(i)">Delet</button>
+          </div>
+        </div>
+      </div>
+      <div class="button-center">
+        
+      </div>
       <div class="button-center">
       <button type="submit" class="btn btn-primary" (click)="submit()">Submit</button>
       </div>
