@@ -13,7 +13,6 @@
         <p>invalid:{{employeeForm.get("name")?.invalid}}</p>
         <p>errors{{employeeForm.get("name")?.errors|json}}</p> -->
       </div>
-  
       <div class="form-group" >   
         <input class="mobileiput" [ngClass]=" employeeForm.get('mobile')?.touched && employeeForm.get('mobile')?.invalid ? 'redbox' : 'false'" formControlName="mobile" maxlength="10" type="text" class="form-control" id="mobile" placeholder="Mobile" name="mobile">
       </div>
@@ -22,7 +21,6 @@
           <p *ngIf="employeeForm.get('mobile')?.errors?.['minlength']">Mobile Number must contain 10 digits</p>
           <p *ngIf="employeeForm.get('mobile')?.errors?.['maxlength']">Mobile Number must contain 10 digits</p>
       </div>
-      
       <div class="form-group">
         <input formControlName="email" type="text" class="form-control" id="email" placeholder="Email" name="email">
       </div>
@@ -58,12 +56,34 @@
           </div>
         </div>
       </div>
-      <div class="form-group">
+      <!-- <div class="form-group">
         <input  formControlName="role" type="text" class="form-control" id="role" placeholder="Role" name="role">
+      </div> -->
+      <div class="form-group checkbox-role">
+        <label>Role:&nbsp;</label>
+        <label for="frontEnd">Frontend</label>
+        <input formControlName="role" type="radio" id="frontEnd" value="frontEnd"><label>&nbsp;&nbsp;&nbsp;</label>
+        <label for="backEnd">BackEnd</label>
+        <input formControlName="role" type="radio" id="backEnd" value="backEnd">
+      </div>
+      <div *ngIf="employeeForm.get('role')?.value=='frontEnd'">
+        <div class="form-group">
+          <input formControlName="html"  type="text" class="form-control" id="html" placeholder="html" >
+        </div>
+        <div class="form-group">
+          <input formControlName="angular"  type="text" class="form-control" id="angular" placeholder="Angular" >
+        </div>
+      </div>
+      <div *ngIf="employeeForm.get('role')?.value=='backEnd'">
+        <div class="form-group">
+          <input formControlName="java" type="text" class="form-control" id="java" placeholder="java" >
+        </div>
+        <div class="form-group">
+          <input formControlName="sql" type="text" class="form-control" id="sql" placeholder="sql" >
+        </div>
       </div>
       <div class="form-group">
-        
-        <input  formControlName="id" type="text" class="form-control" id="id" placeholder="ID" name="id">
+        <input  formControlName="id" type="text" class="form-control" id="id" placeholder="ID" >
       </div>
       <div class="button-center">
       <button type="submit" class="btn btn-primary" (click)="submit()" [disabled]="employeeForm.invalid">Submit</button>

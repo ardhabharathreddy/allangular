@@ -20,6 +20,7 @@
     <div class="button-center">
         <button class="btn btn-primary" (click)="filterAll()">FilterAll</button>
     </div>
+    
     <table class="table table-striped">
     <thead>
         <tr class="rowHeader">
@@ -31,6 +32,7 @@
             <th>Color</th>
             <th>Image</th>
             <th>Id</th>
+            <th>Operations</th>
         </tr>
     </thead>
     <tbody>
@@ -45,7 +47,7 @@
             <td>{{vehicle.color}}</td>
             <td><img src="{{vehicle.image}}" alt="Vehicle Image" width="50em" height="50em"></td>
             <td>{{vehicle.id}}</td>
-            <td><button class="btn btn-primary" (click)="delete(vehicle.id)">Delete</button></td>
+            <td><button class="btn btn-outline-light text-dark" (click)="view(vehicle.id)"><i class="fa fa-eye"></i></button><button class="btn btn-outline-light text-dark" (click)="delete(vehicle.id)"><i class="fa fa-trash-o"></i></button></td>
              <!-- </ng-container> -->
         </tr>
     </tbody>

@@ -10,6 +10,7 @@ import { CreateemployeeComponent } from './createemployee/createemployee.compone
 import { CreatevehicleComponent } from './createvehicle/createvehicle.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { EmployeedetailsComponent } from './employeedetails/employeedetails.component';
 import { EventbindingComponent } from './eventbinding/eventbinding.component';
 import { FlipkartproductComponent } from './flipkartproduct/flipkartproduct.component';
 import { HomeComponent } from './home/home.component';
@@ -32,11 +33,13 @@ const routes: Routes = [
               {path:"createaccount",component:CreateaccountComponent},
               {path:"employee",component:EmployeeComponent},
               {path:"createemployee",component:CreateemployeeComponent},
+              {path:"employeedetails/:id",component:EmployeedetailsComponent},
               {path:"",component:HomeComponent},
               {path:"**",component:PagenotfoundComponent}
             ]
   },
   {path:"flipkartproduct",component:FlipkartproductComponent},
+  {path:"employeedetails",component:EmployeedetailsComponent},
   {
     path:"",
     component:LoginComponent

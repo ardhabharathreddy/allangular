@@ -20,6 +20,10 @@ import { CreatevehicleComponent } from './createvehicle/createvehicle.component'
 import { CreateaccountComponent } from './createaccount/createaccount.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { CreateemployeeComponent } from './createemployee/createemployee.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { EmployeedetailsComponent } from './employeedetails/employeedetails.component';
+import { RupeePipe } from './rupee.pipe';
+import { CurrencyPipe } from './currency.pipe';
 
 @NgModule({
   declarations: [
@@ -38,14 +42,18 @@ import { CreateemployeeComponent } from './createemployee/createemployee.compone
     CreatevehicleComponent,
     CreateaccountComponent,
     EmployeeComponent,
-    CreateemployeeComponent
+    CreateemployeeComponent,
+    EmployeedetailsComponent,
+    RupeePipe,
+    CurrencyPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

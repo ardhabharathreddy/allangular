@@ -60,6 +60,9 @@ export class VehiclesummaryComponent implements OnInit {
       (error:any)=>{alert("failed to delete")}
     );
   }
+  view(vehicleId:any){
+    
+  }
   constructor(private vehicleService:VehicelServicesService) { 
     // this.vehicles=vehicleService.data;
     vehicleService.getData().subscribe(
