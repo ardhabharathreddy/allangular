@@ -19,6 +19,9 @@ export class EmployeeComponent implements OnInit {
  view(id:any){
   this.router.navigateByUrl("/dashboard/employeedetails"+"/"+id);
  }
+ edit(id:any){
+   this.router.navigateByUrl("/dashboard/editemployee"+"/"+id);
+ }
   constructor(private employeeService:EmployeeServiceService,private router:Router) {
     employeeService.getEmployee().subscribe(
       (data:any)=>{this.employees=data},

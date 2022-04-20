@@ -24,6 +24,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EmployeedetailsComponent } from './employeedetails/employeedetails.component';
 import { RupeePipe } from './rupee.pipe';
 import { CurrencyPipe } from './currency.pipe';
+import { AboutModule } from './about/about.module';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { SiblingoneComponent } from './siblingone/siblingone.component';
+import { SiblingtwoComponent } from './siblingtwo/siblingtwo.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +50,11 @@ import { CurrencyPipe } from './currency.pipe';
     CreateemployeeComponent,
     EmployeedetailsComponent,
     RupeePipe,
-    CurrencyPipe
+    CurrencyPipe,
+    ParentComponent,
+    ChildComponent,
+    SiblingoneComponent,
+    SiblingtwoComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +62,8 @@ import { CurrencyPipe } from './currency.pipe';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    AboutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -23,7 +23,11 @@
             <td>{{employee.education|json}}</td> -->
             <th>{{employee.role}}</th>
             <td>{{employee.id}}</td>
-            <td><span><button class="btn btn-outline-light text-dark" (click)="view(employee.id)"><i class="fa fa-eye"></i></button><button class="btn btn-outline-light text-dark" (click)="delete(employee.id)"><i class="fa fa-trash-o"></i></button></span></td>
+            <td><span><button class="btn btn-outline-light text-dark" (click)="edit(employee.id)"><i class="fa fa-edit"></i></button>
+                      <button class="btn btn-outline-light text-dark" (click)="view(employee.id)"><i class="fa fa-eye"></i></button>
+                      <button class="btn btn-outline-light text-dark" (click)="delete(employee.id)"><i class="fa fa-trash-o"></i></button>
+                </span>
+            </td>
         </tr>
     </tbody>
 </table>

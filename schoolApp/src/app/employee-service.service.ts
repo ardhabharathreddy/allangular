@@ -18,5 +18,8 @@ export class EmployeeServiceService {
   getEmployeeById(id:any):Observable<any>{
     return this.httpClient.get("https://6222413b666291106a21d80b.mockapi.io/employees"+'/'+id);
   }
+  editEmployee(emp:any){
+    return this.httpClient.put("https://6222413b666291106a21d80b.mockapi.io/employees"+"/"+emp.id,emp);
+  }
   constructor(private httpClient:HttpClient) { }
 }

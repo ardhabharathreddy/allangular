@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { EmployeeServiceService } from '../employee-service.service';
 
 @Component({
@@ -9,6 +10,8 @@ import { EmployeeServiceService } from '../employee-service.service';
 })
 export class CreateemployeeComponent implements OnInit {
   employeeForm!: FormGroup;
+  employeeDetails:any=null;
+  idOfArgs:any=null;
   get educationFormArray(){
     return this.employeeForm.get("education")as FormArray;
   }
@@ -25,13 +28,23 @@ export class CreateemployeeComponent implements OnInit {
     this.educationFormArray.removeAt(employeeObj);
   }
   submit(){
+    console.log(this.employeeDetails)
+    if(this.employeeDetails)
+    {
+      this.employeeService.editEmployee(this.employeeForm.value).subscribe(
+        (data:any)=>{alert("Edited")},
+        (error:any)=>{alert("Edit Failed")}
+      )
+    }
+    else{
     console.log(this.employeeForm.value);
     this.employeeService.postEmployee(this.employeeForm.value).subscribe(
       (data:any)=>{alert("success")},
       (error:any)=>{alert("failed to push")}
     )
+    }
   }
-  constructor(private employeeService:EmployeeServiceService) { 
+  constructor(private employeeService:EmployeeServiceService,private activatedRoute:ActivatedRoute) { 
     // this.employeeForm.get('role')?.valueChanges.subscribe(
     //   (data:any)=>{
     //     if(data=="frontEnd"){
@@ -45,8 +58,25 @@ export class CreateemployeeComponent implements OnInit {
     //   },
     //   (error:any)=>{alert("Push Failed")}
     // )
-  }
-
+    this.activatedRoute.params.subscribe(
+      (data:any)=>{this.idOfArgs=data.id},
+      (error:any)=>{alert("no id from path")}
+    )
+    if(this.idOfArgs!=null)
+    this.activatedRoute.params.subscribe(
+      (data:any)=>{this.employeeService.getEmployeeById(data.id).subscribe(
+                    (data:any)=>{
+                      
+                      this.employeeDetails=data;
+                      this.employeeForm.patchValue(data);
+                    
+                    },
+                    (error:any)=>{alert("User with this id not found")}
+      )},
+      (error:any)=>{alert("Unable to edit")}
+    )
+      }
+  
   ngOnInit(): void {
     this.employeeForm=new FormGroup(
       {
