@@ -88,3 +88,15 @@ button:visited{
 li:hover{
     cursor: pointer;
 }
+.fa{
+    position: relative;
+    display: inline-block;
+}
+.badge{
+    
+    position: absolute;
+    font-size: xx-small;
+    top: -0.87em;
+    right: -0.87em;
+    border-radius: 50%;
+}

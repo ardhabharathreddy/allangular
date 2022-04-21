@@ -7,10 +7,16 @@ import { CommonService } from '../common.service';
   styleUrls: ['./siblingtwo.component.css']
 })
 export class SiblingtwoComponent implements OnInit {
-
-  constructor(private commonService:CommonService) { }
+  dataVariable:any;
+  constructor(private commonService:CommonService) {
+    
+   }
 
   ngOnInit(): void {
+    this.commonService.getData().subscribe(
+      (data:any)=>{this.dataVariable=data},
+      (error:any)=>{alert("Cannot get data from sibling1")}
+    )
   }
 
 }

@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
                    console.log(data);
                   //  localStorage.setItem("myAppToken",data.token);
                   //  this.router.navigateByUrl("/dashboard")
-                  sessionStorage.setItem("myAppToken",data.token);
+                  localStorage.setItem("myAppToken",data.token);
                   this.router.navigateByUrl("/dashboard")
                    },
       (error:any)=>{alert('Failed to login')}

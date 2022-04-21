@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CommonService {
+export class CartService {
   public dataSub:BehaviorSubject<any>=new BehaviorSubject(0);
-  getData(){
-    return this.dataSub.asObservable();
-  }
   setData(value:any){
-    this.dataSub.next(value);
+    this.dataSub.next(value)
+  }
+  getData():Observable<any>{
+    return this.dataSub.asObservable();
   }
   constructor() { }
 }

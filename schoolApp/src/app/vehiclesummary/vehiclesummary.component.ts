@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { VehicelServicesService } from '../vehicel-services.service';
+import { Vehicle } from '../vehicle';
 
 @Component({
   selector: 'app-vehiclesummary',
@@ -7,7 +8,7 @@ import { VehicelServicesService } from '../vehicel-services.service';
   styleUrls: ['./vehiclesummary.component.css']
 })
 export class VehiclesummaryComponent implements OnInit {
-  vehicles:any=[];
+  vehicles:Vehicle[]=[];
   filterContent:any="";
   sortBy:any="";
   order:any="";

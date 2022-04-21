@@ -6,6 +6,7 @@ import { AccountsComponent } from './accounts/accounts.component';
 import { AppComponent } from './app.component';
 import { AppsComponent } from './apps/apps.component';
 import { AuthGuard } from './auth.guard';
+import { CartComponent } from './cart/cart.component';
 import { ChildComponent } from './child/child.component';
 import { CreateaccountComponent } from './createaccount/createaccount.component';
 import { CreateemployeeComponent } from './createemployee/createemployee.component';
@@ -20,6 +21,8 @@ import { InterpolationComponent } from './interpolation/interpolation.component'
 import { LoginComponent } from './login/login.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ParentComponent } from './parent/parent.component';
+import { PaymentComponent } from './payment/payment.component';
+import { ProductSummaryComponent } from './product-summary/product-summary.component';
 import { SiblingoneComponent } from './siblingone/siblingone.component';
 import { SiblingtwoComponent } from './siblingtwo/siblingtwo.component';
 import { VehiclesummaryComponent } from './vehiclesummary/vehiclesummary.component';
@@ -45,6 +48,9 @@ const routes: Routes = [
               {path:"parent",component:ParentComponent},
               {path:"siblingone",component:SiblingoneComponent},
               {path:"siblingtwo",component:SiblingtwoComponent},
+              {path:"cart",component:CartComponent},
+              {path:"product-summary",component:ProductSummaryComponent},
+              {path:"payment",component:PaymentComponent},
               {path:"",component:HomeComponent},
               {path:"**",component:PagenotfoundComponent}
             ]

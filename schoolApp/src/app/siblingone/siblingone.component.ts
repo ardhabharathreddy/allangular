@@ -7,8 +7,12 @@ import { CommonService } from '../common.service';
   styleUrls: ['./siblingone.component.css']
 })
 export class SiblingoneComponent implements OnInit {
-
-  constructor(private commonService:CommonService) { }
+ value:any;
+ send(){
+   this.commonService.setData(this.value);
+ }
+  constructor(private commonService:CommonService) {
+   }
 
   ngOnInit(): void {
   }
